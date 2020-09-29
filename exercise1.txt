@@ -1,0 +1,63 @@
+package com.exerciseProject1.modal;
+
+public class Account{
+
+	private int accountnumber;
+	private String name;
+	private float balance;
+
+	public int getAccountnumber() {
+		return accountnumber;
+	}
+
+	public void setAccountnumber(int accountnumber) {
+		this.accountnumber = accountnumber;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public float getbalance() {
+		return balance;
+	}
+	
+	public void setbalance(float balance) {
+		this.balance = balance;
+	}
+	
+   public void withdrawMoney(float amountToWithdraw){
+		
+		this.balance=this.balance-amountToWithdraw;
+		
+	System.out.println("Balance"+balance);	
+	}	
+}
+
+
+
+package com.exercise1.service;
+
+import com.exerciseProject1.service.Account;
+
+public class Accountdetail {
+
+	public static void main(String args[]) {
+		
+		Account Acc=new Account();
+		
+		Acc.setAccountnumber(23455667);
+		Acc.setName("Sophia");
+		Acc.setbalance(50000);
+		
+		Acc.withdrawMoney(5);
+		
+
+	System.out.println("Name"+Acc.getName());
+	System.out.println("Accontnumber"+Acc.getAccountnumber());
+}
+}
